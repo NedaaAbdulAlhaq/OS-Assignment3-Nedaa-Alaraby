@@ -132,30 +132,38 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
+### Entry 1 - [November 6, 2026 at 1:30 AM]
 **What I did**:
+Started Assignment 3, opened the project in VS Code, and ran the original code before making any changes.
 
 **Details**:
+I opened the project in VS Code and checked that my student ID was correctly added in SchedulerSimulationSync.java. After that, I created a commit for updating my student ID as required before starting the assignment. I then ran the original starter code before making any modifications. During execution, I noticed that more than one CPU selected the same process, and the program produced an IllegalThreadStateException. I saved the output because I will need it later when answering the technical questions.
 
 **Challenges**:
+I did not understand why the same process was selected by multiple CPUs.
 
 **Solution**:
+I reviewed the code comments and learned that the problem was caused by a race condition in the ready queue.
 
 **Time spent**:
-
+30 minutes
 ---
 
-### Entry 2 - [Date and Time]
+### Entry 2 - [November 6, 2026 at 2:00 AM]
 **What I did**:
-
+Worked on Feature 1 and learned how to use ReentrantLock.
 **Details**:
 
+I read the ReadyQueue class and identified the methods that access shared data. I learned how lock(), unlock(), and try/finally work. After understanding the problem, I added queueLock and protected the methods add(), poll(), processOf(), and snapshot().
+
 **Challenges**:
+I was confused about where to place the lock and why finally is required.
 
 **Solution**:
+I learned that finally guarantees that the lock will always be released, even if an error occurs. 
 
 **Time spent**:
-
+1 hour 
 ---
 
 ### Entry 3 - [Date and Time]
