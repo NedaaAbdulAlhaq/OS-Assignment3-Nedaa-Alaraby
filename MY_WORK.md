@@ -166,17 +166,21 @@ I learned that finally guarantees that the lock will always be released, even if
 1 hour 
 ---
 
-### Entry 3 - [Date and Time]
+### Entry 3 - [November 7, 2026 at 9:00 PM]
 **What I did**:
+Implemented Feature 2 and protected the shared statistics variables. 
 
 **Details**:
+I added a ReentrantLock in the Shared Stats class. Then I updated the methods that modify contextSwitchCount, completedProcessCount, and totalServiceTime by using lock() and unlock(). I also protected the methods that read these values. After running the program, the verification block showed that all statistics values matched the expected results.
 
 **Challenges**:
+At first, I did not fully understand why the read methods also needed a lock.
 
 **Solution**:
+ I learned that shared data should be protected when reading and writing because another thread may change the value at the same time. After protecting both operations, the results became consistent.
 
 **Time spent**:
-
+1 hour 54 minutes
 ---
 
 ### Entry 4 - [Date and Time]
