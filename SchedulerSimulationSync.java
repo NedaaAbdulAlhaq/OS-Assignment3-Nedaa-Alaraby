@@ -130,9 +130,11 @@ class ReadyQueue {
     private final Map<Thread, Process> map = new HashMap<>();     // thread -> process (same idea as Assignment 1)
 
     // TODO Feature 1: declare the lock protecting `list` and `map` here
+
     private final ReentrantLock queueLock =new ReentrantLock();
 
     // TODO Feature 3: declare the counting semaphore that counts the processes waiting in the ready queue here
+    
      public final Semaphore processSemaphore = new Semaphore(0);
 
     // Add a process to the ready queue (new process, or a process that did not finish its quantum)
